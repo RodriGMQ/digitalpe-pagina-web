@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,31 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom futuristic colors
+				'cyber-yellow': {
+					50: '60 100% 97%',
+					100: '54 100% 91%',
+					200: '52 100% 83%',
+					300: '50 100% 74%',
+					400: '48 100% 65%',
+					500: '45 100% 51%',
+					600: '42 100% 45%',
+					700: '38 100% 38%',
+					800: '32 100% 30%',
+					900: '28 100% 24%',
+				},
+				'electric-blue': {
+					50: '220 100% 97%',
+					100: '220 92% 91%',
+					200: '220 89% 83%',
+					300: '220 85% 74%',
+					400: '220 82% 65%',
+					500: '217 91% 60%',
+					600: '214 88% 52%',
+					700: '210 85% 45%',
+					800: '206 82% 38%',
+					900: '202 80% 31%',
 				}
 			},
 			borderRadius: {
@@ -84,11 +110,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-20px)' }
+				},
+				'glow': {
+					'0%, 100%': { boxShadow: '0 0 20px hsl(45 100% 51% / 0.5)' },
+					'50%': { boxShadow: '0 0 40px hsl(45 100% 51% / 0.8)' }
+				},
+				'slide-up': {
+					'0%': { opacity: '0', transform: 'translateY(30px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite alternate',
+				'slide-up': 'slide-up 0.8s ease-out',
+				'fade-in': 'fade-in 1s ease-out'
 			}
 		}
 	},
